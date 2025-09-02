@@ -3,21 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sensor Final Test</title>
+    <title>Sensor Access Test</title>
+    <style>
+        /* 見た目を整えるための簡単なCSSです */
+        body { font-family: sans-serif; padding: 20px; }
+        .container { margin-bottom: 20px; }
+        .status { padding: 10px; background-color: #f0f0f0; border-left: 5px solid #ccc; font-weight: bold; margin-bottom: 20px; }
+        button { font-size: 1.2em; padding: 15px 30px; cursor: pointer; }
+    </style>
 </head>
 <body>
-    <h1>加速度センサー</h1>
-    <p>X軸: <span id="accel-x">0</span></p>
-    <p>Y軸: <span id="accel-y">0</span></p>
-    <p>Z軸: <span id="accel-z">0</span></p>
+
+    <h1>センサーアクセス テスト</h1>
+
+    <div id="status-display" class="status">
+        準備完了。下のボタンをタップしてセンサーを開始してください。
+    </div>
+
+    <button id="start-button">センサーを開始</button>
 
     <hr>
 
-    <h1>傾きセンサー</h1>
-    <p>α (アルファ): <span id="orient-a">0</span></p>
-    <p>β (ベータ): <span id="orient-b">0</span></p>
-    <p>γ (ガンマ): <span id="orient-g">0</span></p>
+    <div class="container">
+        <h2>加速度センサー (Device Motion)</h2>
+        <p>X軸: <span id="accel-x">0</span></p>
+        <p>Y軸: <span id="accel-y">0</span></p>
+        <p>Z軸: <span id="accel-z">0</span></p>
+    </div>
+
+    <div class="container">
+        <h2>傾きセンサー (Device Orientation)</h2>
+        <p>α (アルファ): <span id="orient-a">0</span></p>
+        <p>β (ベータ): <span id="orient-b">0</span></p>
+        <p>γ (ガンマ): <span id="orient-g">0</span></p>
+    </div>
     
     <script src="main.js"></script>
+
 </body>
 </html>
