@@ -3,75 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Walk Music Prototype</title>
-    <style>
-        body { 
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
-            padding: 20px; 
-            background-color: #f5f5f7;
-            color: #1d1d1f;
-        }
-        .container { 
-            margin-bottom: 20px; 
-            padding: 15px;
-            background-color: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-        }
-        .status { 
-            padding: 10px; 
-            background-color: #e8e8ed; 
-            border-left: 5px solid #007aff; 
-            font-weight: bold; 
-            margin-bottom: 20px; 
-            border-radius: 6px;
-        }
-        button { 
-            width: 100%;
-            font-size: 1.2em; 
-            padding: 15px 30px; 
-            cursor: pointer; 
-            background-color: #007aff;
-            color: white;
-            border: none;
-            border-radius: 12px;
-            font-weight: bold;
-        }
-        h1, h2 {
-            color: #1d1d1f;
-        }
-        #bpm-display {
-            font-size: 2.5em;
-            font-weight: bold;
-            color: #007aff;
-        }
-    </style>
+    <title>Day 1: 歩行検出プロトタイプ</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h1>歩行検出プロトタイプ Day 1</h1>
+    <p>下のボタンを押し、センサーの使用を許可してから歩いてみてください。</p>
+    <button id="startButton">開始</button>
+    <div id="status">ステータス: 待機中</div>
 
-    <h1>Walk Music 🎵</h1>
-
-    <div id="status-display" class="status">
-        下のボタンをタップして散歩を開始してください。
-    </div>
-
-    <button id="start-button">散歩を開始</button>
-    
-    <div class="container">
-        <h2>現在のテンポ (BPM)</h2>
-        <p><span id="bpm-display">0</span></p>
-    </div>
-
-    <hr>
-
-    <div class="container" style="display: none;">
-        <h2>デバッグ情報</h2>
-        <p>X軸: <span id="accel-x">0</span></p>
-        <p>Y軸: <span id="accel-y">0</span></p>
-        <p>Z軸: <span id="accel-z">0</span></p>
-    </div>
-    
-    <script src="main.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>
