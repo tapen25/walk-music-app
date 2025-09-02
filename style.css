@@ -1,12 +1,23 @@
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     font-family: sans-serif;
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f0f0;
 }
+
 button {
-    padding: 15px 30px;
     font-size: 1.2em;
+    padding: 12px 25px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+}
+
+#status {
+    margin-top: 20px;
+    font-size: 1.1em;
+    color: #333;
+    min-height: 1.5em; /* 表示がガタつくのを防ぐ */
 }
